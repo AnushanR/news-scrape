@@ -13,14 +13,14 @@ let mongooseConnection = mongoose.connection;
 /////////////////////////////////////////////// /* Initialize Express */ //////////////////////////////////////////////////////////
 let app = express();
 
-/////////////////////////////////////////////// /* Express Middleware */ //////////////////////////////////////////////////////////
+
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true})); // Allows For JSON Interactions Between Client & Server
 app.use(express.static("client/build")); // Serve Static React Pages
 app.use(bodyParser.text());
 app.use(bodyParser.json({type: "application/vnd.api+json"}));
 
-/////////////////////////////////////////////// /* Mongoose Configurations*/ //////////////////////////////////////////////////////////
+
 mongoose.Promise = global.Promise; // Set up promises with mongoose
 
 mongoose.connect( // Connect to the Mongo DB
@@ -44,10 +44,10 @@ app.use(cors());
 
 
 
-app.use(routes); // Add routes, both API and View
+app.use(routes); 
 
 
-/////////////////////////////////////////////// /* Start Server */ //////////////////////////////////////////////////////////
+
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

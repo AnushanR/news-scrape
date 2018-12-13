@@ -1,9 +1,9 @@
-/////////////////////////////////////////////// /* Import Stock React Components */ //////////////////////////////////////////////////////////
+
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
-/////////////////////////////////////////////// /* Components */ //////////////////////////////////////////////////////////
+
 // import Nav from './components/NavBar';
 import Home from './pages/Home';
 import Saved from './pages/Saved';
